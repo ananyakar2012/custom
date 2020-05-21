@@ -1,0 +1,38 @@
+<?php
+
+/**
+ * @file
+ * Contains actor.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+use Drupal\node\Entity\Node;
+use Drupal\taxonomy\Entity\Term;
+use Drupal\file\Entity\File;
+/**
+ * Implements hook_help().
+ */
+function actor_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the actor module.
+    case 'help.page.actor':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Actor list') . '</p>';
+      return $output;
+
+    default:
+  }
+}
+
+/**
+ * Implements hook_theme().
+ */
+function actor_theme() {
+  return [
+    'actor' => [
+      'render element' => 'children',
+    ],
+  ];
+}
+

@@ -1,0 +1,23 @@
+actor.actorlist:
+  path: '/actor/form/actorlist'
+  defaults:
+    _form: '\Drupal\actor\Form\actorlist'
+    _title: 'actorlist'
+  requirements:
+    _access: 'TRUE'
+
+actor.actorlist_controller_actorlist:
+  path: '/actor/actorlist/{nodeid}'
+  defaults:
+    _controller: '\Drupal\actor\Controller\actorlistController::actorlist'
+    _title: 'actorlist'
+  requirements:
+    _permission: 'access content'
+    
+actor.actorlist_controller_coactorlist:
+  path: '/actor/coactorlist/{cid}/{mid}'
+  defaults:
+    _controller: '\Drupal\actor\Controller\actorlistController::coactorlist'
+    _title: 'actorlist'
+  requirements:
+    _permission: 'access content'

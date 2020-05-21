@@ -1,0 +1,5 @@
+name: 'actor'
+type: module
+description: 'Actor list'
+core: 8.x
+package: 'Custom'
